@@ -1,0 +1,18 @@
+server:
+  port: 8060
+spring:
+  application:
+    name: turbine
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10 #心跳间隔
+  client:
+    registerWithEureka: true #注册本工程为服务
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://admin:admin123@localhost:8090/eureka/
+#turbine:
+#  aggregator:
+#    clusterConfig: gateway,product,authorization  #turbine监控的服务名称，可以多个
+#  appConfig: cloud-simple-service  #turbine监控的服务，可以有多个
+#  clusterNameExpression: metadata['cluster']
