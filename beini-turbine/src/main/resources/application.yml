@@ -3,11 +3,11 @@ server:
 spring:
   application:
     name: turbine
-eureka:
+eureka: 
   instance:
-    leaseRenewalIntervalInSeconds: 10 #心跳间隔
+    nonSecurePort: 8060
   client:
-    registerWithEureka: true #注册本工程为服务
+    registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://admin:admin123@localhost:8090/eureka/
